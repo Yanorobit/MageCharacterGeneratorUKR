@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Маг: Вознесіння — Генератор персонажа</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Маг: Вознесіння — Генератор персонажа</h1>
+  <div class="container">
+    <div class="main-content">
+      <!-- Attributes Section -->
+      <div class="section attributes-section">
+        <h2>Атрибути</h2>
+        <div class="distribution-controls">
+          <div>
+            <label>Пріоритетна категорія (7 очок):
+              <select id="attrPrimary">
+                <option value="Physical">Фізичні</option>
+                <option value="Social">Соціальні</option>
+                <option value="Mental">Ментальні</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label>Другорядна (5 очок):
+              <select id="attrSecondary">
+                <option value="Physical">Фізичні</option>
+                <option value="Social" selected>Соціальні</option>
+                <option value="Mental">Ментальні</option>
+              </select>
+            </label>
+          </div>
+          <div>Третинна (3 очка): <span id="attrTertiaryLabel">Ментальні</span></div>
+        </div>
+        <div class="categories attributes">
+          <div class="category category-physical">
+            <h3>Фізичні</h3>
+            <div class="field"><label>Сила <input type="number" class="attr-input" data-category="Physical" min="1" max="5" value="1"></label></div>
+            <div class="field"><label>Спритність <input type="number" class="attr-input" data-category="Physical" min="1" max="5" value="1"></label></div>
+            <div class="field"><label>Витривалість <input type="number" class="attr-input" data-category="Physical" min="1" max="5" value="1"></label></div>
+          </div>
+          <div class="category category-social">
+            <h3>Соціальні</h3>
+            <div class="field"><label>Харизма <input type="number" class="attr-input" data-category="Social" min="1" max="5" value="1"></label></div>
+            <div class="field"><label>Маніпуляція <input type="number" class="attr-input" data-category="Social" min="1" max="5" value="1"></label></div>
+            <div class="field"><label>Привабливість <input type="number" class="attr-input" data-category="Social" min="1" max="5" value="1"></label></div>
+          </div>
+          <div class="category category-mental">
+            <h3>Ментальні</h3>
+            <div class="field"><label>Сприйняття <input type="number" class="attr-input" data-category="Mental" min="1" max="5" value="1"></label></div>
+            <div class="field"><label>Інтелект <input type="number" class="attr-input" data-category="Mental" min="1" max="5" value="1"></label></div>
+            <div class="field"><label>Кмітливість <input type="number" class="attr-input" data-category="Mental" min="1" max="5" value="1"></label></div>
+          </div>
+        </div>
+      </div>
+      <!-- Abilities Section -->
+      <div class="section abilities-section">
+        <h2>Здібності</h2>
+        <div class="distribution-controls">
+          <div>
+            <label>Пріоритетна категорія (13 очок):
+              <select id="abilPrimary">
+                <option value="talents">Таланти</option>
+                <option value="skills">Навички</option>
+                <option value="knowledge">Знання</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label>Другорядна (9 очок):
+              <select id="abilSecondary">
+                <option value="talents">Таланти</option>
+                <option value="skills" selected>Навички</option>
+                <option value="knowledge">Знання</option>
+              </select>
+            </label>
+          </div>
+          <div>Третинна (5 очок): <span id="abilTertiaryLabel">Знання</span></div>
+        </div>
+        <div class="categories abilities">
+          <div class="category category-talents">
+            <h3>Таланти</h3>
+            <div class="field"><label>Атлетика <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Бійка <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Вуличне знання <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Емпатія <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Залякування <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Лідерство <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Мистецтво <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Експресія <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Пильність <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Хитрість <input type="number" class="ability-input" data-category="talents" min="0" max="5" value="0"></label></div>
+          </div>
+          <div class="category category-skills">
+            <h3>Навички</h3>
+            <div class="field"><label>Фехтування <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Бойові мистецтва <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Виживання <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div the="field"><label>Водіння <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Дослідження <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Етикет <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Медитація <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Ремесло <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Стрільба <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Інжинерія <input type="number" class="ability-input" data-category="skills" min="0" max="5" value="0"></label></div>
+          </div>
+          <div class="category category-knowledge">
+            <h3>Знання</h3>
+            <div class="field"><label>Академічні знання <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Загадки <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Комп'ютери <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Космологія <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Медицина <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Наука <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Окультизм <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Політика <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Право <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Розслідування <input type="number" class="ability-input" data-category="knowledge" min="0" max="5" value="0"></label></div>
+          </div>
+        </div>
+        <div class="add-form">
+          <label>Назва здібності: <input type="text" id="newAbilityName"></label>
+          <label>Категорія: 
+            <select id="newAbilityCategory">
+              <option value="talents">Таланти</option>
+              <option value="skills">Навички</option>
+              <option value="knowledge">Знання</option>
+            </select>
+          </label>
+          <label>Рейтинг: <input type="number" id="newAbilityRating" min="0" max="5" value="0"></label>
+          <button type="button" id="addAbilityBtn">Додати здібність</button>
+        </div>
+      </div>
+      <!-- Backgrounds Section -->
+      <div class="section backgrounds-section">
+        <h2>Передісторії</h2>
+        <div id="backgroundList">
+          <!-- backgrounds will be added here -->
+        </div>
+        <div class="add-form">
+          <label>Назва: <input type="text" id="newBackgroundName"></label>
+          <label>Рейтинг: <input type="number" id="newBackgroundRating" min="0" max="5" value="0"></label>
+          <button type="button" id="addBackgroundBtn">Додати</button>
+        </div>
+      </div>
+      <!-- Traits Section (Arete & Willpower) -->
+      <div class="section traits-section">
+        <h2>Аріте та Сила Волі</h2>
+        <div class="field"><label>Аріте <input type="number" id="areteInput" min="1" max="10" value="1"></label></div>
+        <div class="field"><label>Сила Волі <input type="number" id="willpowerInput" min="1" max="10" value="5"></label></div>
+      </div>
+      <!-- Spheres Section -->
+      <div class="section spheres-section">
+        <h2>Сфери</h2>
+        <div class="categories spheres">
+          <div class="category sphere-col">
+            <div class="field"><label>Кореспонденція <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Ентропія <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Сили <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+          </div>
+          <div class="category sphere-col">
+            <div class="field"><label>Життя <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Матерія <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Розум <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+          </div>
+          <div class="category sphere-col">
+            <div class="field"><label>Першооснова <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Дух <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+            <div class="field"><label>Час <input type="number" class="sphere-input" min="0" max="5" value="0"></label></div>
+          </div>
+        </div>
+      </div>
+      <!-- Merits & Flaws Section -->
+      <div class="section merits-section">
+        <h2>Переваги та Вади</h2>
+        <div id="meritsList">
+          <!-- merits and flaws will be added here -->
+        </div>
+        <div class="add-form">
+          <label>Назва: <input type="text" id="newMeritName"></label>
+          <label>Значення: <input type="number" id="newMeritValue" min="-10" max="10" value="0"></label>
+          <button type="button" id="addMeritBtn">Додати</button>
+        </div>
+      </div>
+    </div>
+    <div class="summary">
+      <h2>Підсумок</h2>
+      <label><input type="checkbox" id="ignoreRules"> Вимкнути обмеження правил створення</label>
+      <p id="attrSummary"></p>
+      <p id="abilitySummary"></p>
+      <p id="bgSummary"></p>
+      <p id="sphereSummary"></p>
+      <p id="freebieSummary"></p>
+    </div>
+  </div>
+   <script src="script.js"></script>
+</body>
+</html>
